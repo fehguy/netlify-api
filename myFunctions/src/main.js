@@ -1,4 +1,4 @@
-const handler = exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
     return {
         message: "it works"
     }
