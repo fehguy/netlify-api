@@ -7,8 +7,8 @@
     "scripts": {
         "build": "npm run build:lambda:deps && npm run build:lambda:bundle && npm run build:lambda:build",
         "build:lambda:deps": "npm i -g netlify-cli",
-        "build:lambda:bundle": "cd myFunctions/src && npm i",
-        "build:lambda:build": "netlify functions:build --src myFunctions/src"
+        "build:lambda:bundle": "cd netlify/functions/main && npm i",
+        "build:lambda:build": "netlify functions:build --src netlify/functions/main"
     },
     "author": "",
     "license": "MIT"

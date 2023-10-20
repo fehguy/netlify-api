@@ -4,3 +4,9 @@
 [functions]
   node_bundler = "esbuild"
   included_files = ["./openapi.yaml"]
+
+[[redirects]]
+  from = "/api/v1/:splat"
+  to = "/.netlify/functions/main/"
+  status = 200
+  force = true
