@@ -1,0 +1,16 @@
+{
+    "name": "netlify-api",
+    "version": "1.0.0",
+    "description": "Simple API",
+    "repository": "fehguy/netlify-api",
+    "main": "index.js",
+    "scripts": {
+      "build": "npm run build:lambda:deps && npm run build:lambda:bundle && npm run build:lambda:build",
+      "build:lambda:deps": "npm i -g netlify-cli",
+      "build:lambda:bundle": "cd netlify/functions/goodies && npm i",
+      "build:lambda:build": "cd netlify/functions/goodies && zip -r ../goodies.zip *.js *.yaml controllers node_modules && rm -rf *.js node_modules"
+    },
+    "author": "",
+    "license": "MIT"
+  }
+  
