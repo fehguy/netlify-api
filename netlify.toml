@@ -3,7 +3,7 @@
 
 [functions]
   node_bundler = "esbuild"
-  included_files = ["./openapi.yaml"]
+  included_files = ["./netlify/functions/main/openapi.yaml"]
 
 [[redirects]]
   from = "/api/v1/:splat"
