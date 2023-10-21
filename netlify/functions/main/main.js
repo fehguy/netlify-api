@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const handler = async (event) => {
   try {
-    const data = fs.readFileSync("./openapi.yaml", "utf-8");
+    const data = fs.readFileSync("./src/openapi.yaml", "utf-8");
     console.log(data);
     const subject = event.queryStringParameters.name || 'World'
     return {
