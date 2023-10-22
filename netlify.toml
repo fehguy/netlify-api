@@ -3,7 +3,7 @@
 
 [functions]
   node_bundler = "esbuild"
-  included_files = ["./src/openapi.yaml"]
+  included_files = ["./src/openapi.yaml", "./src/controllers/*"]
 
 [[redirects]]
   from = "/api/v1/:splat"

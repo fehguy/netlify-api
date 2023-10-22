@@ -1,15 +1,18 @@
 {
     "name": "netlify-api",
     "version": "1.0.0",
-    "description": "Simple API",
+    "description": "Simple Netlify REST API Example",
     "repository": "fehguy/netlify-api",
     "main": "index.js",
     "scripts": {
-        "build": "npm run build:lambda:deps && npm run build:lambda:bundle && npm run build:lambda:build",
+        "build": "npm run build:lambda:deps && npm run build:lambda:bundle",
         "build:lambda:deps": "npm i -g netlify-cli",
-        "build:lambda:bundle": "cd netlify/functions/main && npm i",
-        "build:lambda:build": "netlify functions:build --src netlify/functions/main"
+        "build:lambda:bundle": "netlify functions:build --src netlify/functions/main"
     },
     "author": "",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "swambda": "^0.0.13",
+        "yaml": "^2.3.3"
+    }
 }
